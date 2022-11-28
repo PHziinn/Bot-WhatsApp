@@ -9,21 +9,21 @@ const puppeteer = require("puppeteer");
 
         await page.goto("https://web.whatsapp.com/");
 
-        await page.waitForSelector("._1XkO3");
+        await page.waitForSelector("._1RAKT");
         await deley(5000);
 
-        const contactName = "DEATH ATTACK 🔥";
+        const contactName = ""; //--- Nome do Contato
         await page.click(`span[title='${contactName}']`);
-        await page.waitForSelector("._3ArsE");
+        await page.waitForSelector("._3RGKj");
 
         const editor = await page.$("div[tabindex='-1']");
         await editor.focus();
 
-        const amountOfMessages = 10;
+        const amountOfMessages = 5;
 
         for ( let i = 0; i < amountOfMessages; i++){
             await page.evaluate(() => {
-                const message = "Flamengo é Tricampeão 🖤❤️";
+                const message = "";   //---- Mensagem
                 document.execCommand("insertText", false, message);
               });
             await page.click("span[data-testid='send']");
