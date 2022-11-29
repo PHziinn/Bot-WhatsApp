@@ -32,7 +32,7 @@ const puppeteer = require("puppeteer");
 
         
     } catch (e) {
-        console.log("error mine", e);
+        console.log("error", e);
     }
 })();
 
